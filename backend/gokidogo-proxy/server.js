@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const fetch = (...args) => import("node-fetch").then(({ default: fetch }) => fetch(...args));
+const path = require("path");
 
 const app = express();
 app.use(cors());
@@ -40,8 +41,16 @@ app.post("/api/restaurentdetail", async (req, res) => {
   }
 });
 
-// Start server
+// Serve frontend static files
+app.use(express.static(path.join(__dirname, "dist")));
+
+// Fallback route for React Router
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "dist", "index.html"));
+// });
+
+// Start the server LAST
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Proxy server listening at http://localhost:${PORT}`);
+  console.log(`Server running at http://localhost:${PORT}`);
 });
