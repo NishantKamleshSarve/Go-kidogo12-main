@@ -23,7 +23,7 @@ import Conditions from './pages/Conditions.jsx';
 import Cookie from './pages/Cookie.jsx';
 import Faq from './pages/Faq.jsx';
 import Privacy from './pages/Privacy.jsx';
-import PartnerDetailPage from './pages/PartnerDetailPage.jsx';
+// import PartnerDetailPage from './pages/PartnerDetailPage.jsx';
 import RestaurantList from './pages/RestaurantList.jsx';
 import RestaurantMenu from './pages/RestaurantMenu.jsx';
 import OrderDetailsForm from "./pages/OrderDetailsForm";
@@ -63,7 +63,7 @@ const router = createBrowserRouter(
       <Route path="privacy" element={<Privacy />} />
       <Route path="order-details" element={<OrderDetailsForm />} />
       <Route path="order-confirmation" element={<OrderConfirmation />} />
-      <Route path="partner/:partnerId" element={<PartnerDetailPage />} />
+      {/* <Route path="partner/:partnerId" element={<PartnerDetailPage />} /> */}
       
       
     </Route>
