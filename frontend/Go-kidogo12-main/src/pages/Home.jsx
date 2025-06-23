@@ -77,7 +77,7 @@ function Home() {
 
   const fetchRestaurants = async () => {
     try {
-      const response = await fetch("https://localhost:5000/api/userhome", {
+      const response = await fetch("/api/api.php/userhome", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
