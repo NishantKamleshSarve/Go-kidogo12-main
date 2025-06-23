@@ -17,7 +17,7 @@ const RestaurantMenu = () => {
   useEffect(() => {
     const fetchMenu = async () => {
       try {
-        const response = await fetch('https://go-kidogo.onrender.com/api/restaurentdetail', {
+        const response = await fetch('https://localhost:5000/api/restaurentdetail', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
