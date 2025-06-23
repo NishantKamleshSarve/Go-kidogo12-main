@@ -77,7 +77,7 @@ function Home() {
 
   const fetchRestaurants = async () => {
     try {
-      const response = await fetch("https://go-kidogo12-main.onrender.com/api/userhome", {
+      const response = await fetch("https://go-kidogo.onrender.com/api/userhome", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
