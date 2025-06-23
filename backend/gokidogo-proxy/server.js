@@ -44,9 +44,9 @@ app.post("/api/restaurentdetail", async (req, res) => {
 // Serve frontend static files
 app.use(express.static(path.join(__dirname, "GO-KIDOGO12-MAIN/frontend/Go-kidogo12-main/dist")));
 
-// Fallback route for React Router
+// // React Router fallback
 // app.get("*", (req, res) => {
-//   res.sendFile(path.join(__dirname, "dist", "index.html"));
+//   res.sendFile(path.join(__dirname, "GO-KIDOGO12-MAIN/frontend/Go-kidogo12-main/dist", "index.html"));
 // });
 
 // Start the server LAST
